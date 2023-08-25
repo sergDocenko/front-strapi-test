@@ -1,0 +1,40 @@
+.header {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(193, 192, 192, 0.190);
+  box-shadow: 0 4px 10px rgba(39, 39, 39, 0.156);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: space-between;
+  max-width: 80%;
+}
+.menu li {
+  padding: 10px;
+  color: blue;
+  list-style: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.menu li:hover {
+  color: rgb(88, 88, 198);
+  text-decoration: underline;
+}
+/* .footer {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  color: white;
+  list-style: none;
+  background-color: rgba(2, 2, 64, 0.87);
+  padding: 20px;
+  align-self: flex-end;
+}
+.footer menu li {
+  color: white;
+} */

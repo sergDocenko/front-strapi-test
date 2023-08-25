@@ -1,0 +1,35 @@
+version: "3.9"
+networks:
+  strapi:
+    name: strapi
+    external: true
+
+services:
+  test-app:
+    container_name: app   
+    build:
+    
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      STRAPI_API_URL: "http://strapi:1337/api"
+      STRAPI_UPLOADS_URL: "http://strapi:1337/uploads"
+      API_TOKEN_STRAPI: b1d483563a8131d9d091d811e4909167e046d11ec71504e993bb2617443befcb00f74e43c4bd2df79ff84d9fcefa5f6d759618cff4e12bd8b86be07f27e454977ac0ea2e5a9f4ea0b6184e57169e1e6f0b4a7ef922a14767e13361895acc481968e5eca0fd0e65054b62d3f4c5d9896f53ccbfd81ea400bd466dbcf8c75971ef   
+   
+    networks:
+      - strapi
+    # volumes:
+    #   - ../test-project:/app
+
+  # strapicms:
+  #   container_name: strapi
+  #   build:
+  #     context: ../strapi-test
+  #     dockerfile: ../docker-config/Dockerfile.strapi
+  #   ports:
+  #       - "1337:1337"
+  #   networks:
+  #     - strapi
+    # volumes:
+    #   - ../strapi-test:/app

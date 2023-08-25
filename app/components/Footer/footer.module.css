@@ -1,0 +1,44 @@
+.footer {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    color: white;
+    list-style: none;
+    background-color: rgba(2, 2, 64, 0.87);
+    padding: 20px;
+    align-self: flex-end;
+  }
+  .footer menu li {
+    color: white;
+  }
+  
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+    max-width: 80%;
+  }
+  .menu li {
+    min-width: 150px;
+    padding: 10px;
+    background-color: rgba(22, 20, 52, 0.31);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid rgba(103, 103, 103, 0.274);
+    border-radius: 10px;
+    width: min-content;
+    color: blue;
+    list-style: none;
+    cursor: pointer;
+    transition: all 0.5s;
+  }  
+  .menu img{
+    max-width: 20px;
+  }
+  .menu li:hover {
+    color: rgb(88, 88, 198);
+    text-decoration: underline;
+  }
