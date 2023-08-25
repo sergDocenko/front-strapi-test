@@ -19,17 +19,4 @@ services:
    
     networks:
       - strapi
-    # volumes:
-    #   - ../test-project:/app
-
-  # strapicms:
-  #   container_name: strapi
-  #   build:
-  #     context: ../strapi-test
-  #     dockerfile: ../docker-config/Dockerfile.strapi
-  #   ports:
-  #       - "1337:1337"
-  #   networks:
-  #     - strapi
-    # volumes:
-    #   - ../strapi-test:/app
+    
