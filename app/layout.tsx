@@ -16,27 +16,27 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // const url = process.env.STRAPI_API_URL + "/menus";
-  // const strapiToken = process.env.API_TOKEN_STRAPI;
-  // const res = await fetch(url, {
-  //   method: "GET",
-  //   headers: {
-  //     Authorization: `bearer ${strapiToken}`,
-  //   },
-  //   cache: "no-cache",
-  // });
-  // const { data } = await res.json();
+  const url = process.env.STRAPI_API_URL + "/menus";
+  const strapiToken = process.env.API_TOKEN_STRAPI;
+  const res = await fetch(url, {
+    method: "GET",
+    headers: {
+      Authorization: `bearer ${strapiToken}`,
+    },
+    cache: "no-cache",
+  });
+  const { data } = await res.json();
   return (
     <html lang="en">
       <body className={inter.className}>
         <header className={styles.header}>
-          {/* <menu className={styles.menu}>
+          <menu className={styles.menu}>
             {data.map((item: any) => (
               <li key={item.id}>
                 <h3>{item.attributes.title}</h3>
               </li>
             ))}
-          </menu> */}
+          </menu>
         </header>
         {children}
         <Footer />
